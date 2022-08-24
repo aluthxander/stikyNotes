@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: #C1F4C5;
+}
+
+/* ===================== nav ============================ */
+nav {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    background-color: #65C18C;
+    padding: 18px 22px;
+    height: 64px;
+}
+
+.logo {
+    font-size: 34px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    line-height: 64px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav .add {
+    position: relative;
+    padding: 0 15px 0 11px;
+    border: 2px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    z-index: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+nav .add:hover {
+    color: #65C18C;
+}
+
+nav .add::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #65C18C;
+    z-index: -1;
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    transform: scaleX(1);
+}
+
+.add:hover::before {
+    transform-origin: right;
+    transition: transform 0.4s ease;
+    transform: scaleX(0);
+}
+
+/* ============================ akhir nav ========================== */
+/* ============================ main =============================== */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    padding: 24px;
+    gap: 32px;
+}
+
+.card {
+    position: relative;
+}
+
+.card span {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #ff0f0f;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 23px;
+    left: 198px;
+    top: -14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    color: #fff;
+}
+
+.note {
+    background-color: #fcf26e;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    resize: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #041C32;
+    outline: none;
+}
+
+.note::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.35);
+}
+
+/* ================================ akhir main ===================== */
